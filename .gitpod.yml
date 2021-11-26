@@ -1,8 +1,5 @@
 image:
   file: .gitpod.Dockerfile
 tasks:
-  - init: |
-      eval $(opam env) opam install merlin -y
-      eval $(opam env) ocamlmerlin --help
   - command: |
-      eval $(opam env) ocamlmerlin --help
+      ocamlmerlin single outline < ./main.ml | jq .
