@@ -1,5 +1,7 @@
 image:
   file: .gitpod.Dockerfile
 tasks:
-  - init: opam install merlin -y
+  - init: |
+      opam install merlin -y
+      ocamlmerlin --help
   - command: ocamlmerlin --help
